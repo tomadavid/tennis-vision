@@ -1,5 +1,3 @@
-<img width="1221" height="651" alt="Screenshot 2026-04-19 224444" src="https://github.com/user-attachments/assets/ffbe0980-e49f-4957-88d5-d7b9d1b26361" />
-
 # Tennis Analysis with Computer Vision
 ---
 
