@@ -8,7 +8,7 @@ MAX_BOUNDING_BOXES = 2
 def get_player_positions(video_path):
 
     # Load trained YOLO model
-    model = YOLO("models/best_player.pt")
+    model = YOLO("../models/best_player.pt")
 
     # Open video
     cap = cv2.VideoCapture(video_path)
@@ -20,7 +20,7 @@ def get_player_positions(video_path):
 
     # Output video
     out = cv2.VideoWriter(
-        os.path.join("output","output_video.mp4"),
+        os.path.join("../output","output_video.mp4"),
         cv2.VideoWriter_fourcc(*"mp4v"),
         fps,
         (width, height)
@@ -93,7 +93,7 @@ def get_player_positions(video_path):
     cv2.destroyAllWindows()
 
     # Save player position to CSV
-    with open(os.path.join("output","positions.csv"), "w", newline="") as f:
+    with open(os.path.join("../output","positions.csv"), "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow([
             "x",

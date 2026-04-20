@@ -1,6 +1,6 @@
 import os
-from src.court_coordinates import get_court_homography
-from src.player_detection import get_player_positions
+from court_coordinates import get_court_homography
+from player_detection import get_player_positions
 import numpy as np
 import cv2
 import pandas as pd
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         print("Invalid positions file. Please provide a CSV file.")
         sys.exit(1)
 
-    if not os.path.exists("output"):
+    if not os.path.exists("../output"):
         os.makedirs("output")
 
     # Load positions
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         player_court_coordinates.append((X, Y))
 
     # plot tennis court and player positions
-    court_img = plt.imread("tennis_court.webp")
+    court_img = plt.imread("../tennis_court.webp")
 
     # plot bounds (same as court image dimensions)
     x_min, x_max = 0, 467
